@@ -18,10 +18,14 @@ M.general = {
   n = {
     ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
     -- switch between windows
-    ["<C-h>"] = { "<C-w>h", "Window left" },
-    ["<C-l>"] = { "<C-w>l", "Window right" },
-    ["<C-j>"] = { "<C-w>j", "Window down" },
-    ["<C-k>"] = { "<C-w>k", "Window up" },
+    ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "Window left" },
+    ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "Window right" },
+    ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "Window down" },
+    ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "Window up" },
+
+--    ["F11"] = { "<cmd> DapStepInto<CR>", "DAP Step into" },
+ --   ["F10"] = { "<cmd> DapStepOver<CR>", "DAP Step over" },
+    ["F9"] = { "<cmd> DapToggleBreakpoint<CR>", "DAP Toggle breakpoint"},
 
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
